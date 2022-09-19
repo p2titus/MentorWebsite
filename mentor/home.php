@@ -45,15 +45,18 @@ session_start();
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Project name</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </div><!-- /.nav-collapse -->
+            <li><a href="#">Your profile</a></li>
+            <li><a href="#">Mentee's profile</a></li>
+	  </ul>
+	  <ul class="nav navbar-nav navbar-right">
+	    <li><a href="#">Notifications</a></li>
+            <li><a href="#">Logout</a></li>
+	  </ul>
+	</div><!-- /.nav-collapse -->
       </div><!-- /.container -->
     </nav><!-- /.navbar -->
 
@@ -66,8 +69,8 @@ session_start();
             <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
           </p>
           <div class="jumbotron">
-            <h1>Hello, world!</h1>
-            <p>This is an example to show the potential of an offcanvas layout pattern in Bootstrap. Try some responsive-range viewport sizes to see it in action.</p>
+	  <h1>Hello, <?php echo $_SESSION["fname"] ?></h1>
+            <p>There are no updates to your profile at this time</p>
           </div>
           <div class="row">
             <div class="col-xs-6 col-lg-4">
